@@ -4,21 +4,51 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./favicon.ico" type="ico" />
+    <meta name="description" content="Portfolio for software engineer Nabepa" />
+    <meta name="author" content="Nabepa" />
+    <link rel="icon" href="/image/favicon.ico" type="ico" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="style.css" />
     <title>Nabepa's Portfolio</title>
-    <meta name="description" content="Portfolio for software engineer Nabepa" />
-    <meta name="author" content="Nabepa" />
     <script
       defer
       src="https://kit.fontawesome.com/b9e3004d12.js"
       crossorigin="anonymous"
     ></script>
+    <script defer src="main.js"></script>
     <meta />
   </head>
-  <body></body>
+  <body>
+    <!-- Navbar -->
+    <nav id="navbar">
+      <a class="navbar__logo" href="#">
+        <img class="logo__img" src="image/nabepa.png"></img>
+        <span class="logo_name" href="#">Nabepa</span>
+      </a>
+
+      <ul class="navbar__menu">
+        <li class="navbar__menu__item">Home</li>
+        <li class="navbar__menu__item">About</li>
+        <li class="navbar__menu__item">Skills</li>
+        <li class="navbar__menu__item">Work</li>
+        <li class="navbar__menu__item">Testimonials</li>
+        <li class="navbar__menu__item">Contact</li>
+      </ul>
+    </nav>
+
+    <!-- About -->
+    <section id="about"></section>
+    <!-- Skills -->
+    <section id="skills"></section>
+    <!-- Work -->
+    <section id="work"></section>
+    <!-- Testimonials -->
+    <section id="testimonials"></section>
+    <!-- Contact -->
+    <section id="contact"></section>
+  </body>
 </html>
