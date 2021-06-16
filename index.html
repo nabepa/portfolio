@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -49,11 +49,15 @@
       <div class="home__container">
         <img
           class="home__avatar"
-          src="image/profile.jpeg"
+          src="image/profile.png"
           alt="Nabepa's profile photo"
         />
-        <h1 class="home__title">Hello,<br />I'm Nabepa</h1>
-        <h2 class="home__description">나를 나타낼 수 있는 문장</h2>
+        <h1 class="home__title">
+          何かに熱中することが好きな<br />開発者のノです!
+        </h1>
+        <h2 class="home__description">
+          東京でフロントエンドエンジニアを目指しています
+        </h2>
         <button class="home__contact">Contact Me</button>
       </div>
     </section>
@@ -62,25 +66,35 @@
     <section id="about" class="section">
       <div class="section__container">
         <h1>About me</h1>
-        <p>나를 잘 어필할 수 있는 두 세 문장</p>
+        <div class="about__descriptions">
+          <ul class="about__descriptions__ul">
+            <li>
+              何か熱中することを探して来て，開発の魅力に惹かれ開発者を目指しています
+            </li>
+            <li>新しい事を習うのが好きです</li>
+            <li>
+              真面目さの力を信じ，毎日コミットに挑戦しています(2021.04.18~)
+            </li>
+            <li>仲間と共に成長できる人になりたいです</li>
+          </ul>
+        </div>
         <div class="about__majors">
           <div class="major">
             <div class="major__icon"><i class="fab fa-html5"></i></div>
             <div class="major__title">Front-end</div>
-            <div class="major__description">HTML, CSS, JavaScript</div>
-          </div>
-          <div class="major">
-            <div class="major__icon"><i class="fab fa-css3-alt"></i></div>
-            <div class="major__title">Deep Learning</div>
-            <div class="major__description">Python, Numpy, Tensorflow</div>
-          </div>
-          <div class="major">
-            <div class="major__icon"><i class="fab fa-js"></i></div>
-            <div class="major__title">Language</div>
             <div class="major__description">
-              Korean(Native)<br />Japanese(Business Level)<br />English(Read
-              documents, thesis)
+              HTML, CSS, JavaScript, TypeScript, React
             </div>
+          </div>
+          <div class="major">
+            <div class="major__icon"><i class="fas fa-server"></i></div>
+            <div class="major__title">Back-end</div>
+            <div class="major__description">Nodejs</div>
+          </div>
+          <div class="major">
+            <div class="major__icon"><i class="fas fa-brain"></i></div>
+            <div class="major__title">Deep Learning</div>
+            <div class="major__description">Python, Tensorflow</div>
           </div>
         </div>
         <div class="about__jobs">
@@ -95,7 +109,7 @@
             </div>
           </div>
           <div class="job">
-            <img class="job__logo" src="./image/waseda.jpeg" alt="" />
+            <img class="job__logo" src="./image/korea_army.png" alt="" />
             <div class="job__description">
               <p class="job__name">Korean Army</p>
               <p class="job__period">October 2013 - July 2015</p>
