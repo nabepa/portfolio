@@ -1,28 +1,15 @@
 'use strict';
 
-// Make navbar untransparent when it is on the bottom
-const navbar = document.querySelector('#navbar');
-const navbarHeight = navbar.getBoundingClientRect().height;
-document.addEventListener('scroll', () => {
-  if (window.scrollY > navbarHeight) {
-    navbar.classList.add('navbar--dark');
-  } else {
-    navbar.classList.remove('navbar--dark');
-  }
-});
-
 // Handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) => {
-  /// event.target은 event가 발생한 target element를 반환
   const target = event.target;
-  /// element.dataset.*는 HTML의 element에 data-*로 지정한 데이터를 가져옴
   const link = target.dataset.link;
   if (link == null) {
     return;
   }
 
-  /// 작은 화면일 때, 버튼으로 navbar__menu열어 눌러 스크롤링 될때 창닫기
+  // Open navbar__menu for small screen
   navbarMenu.classList.remove('open');
 
   scrollIntoView(link);
