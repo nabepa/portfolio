@@ -18,6 +18,53 @@ navbarToggleBtn.addEventListener('click', () => {
   navbarMenu.classList.toggle('open');
 });
 
+// Active Navbar
+const sectionIds = ['#home', '#about', '#works', '#study', '#contact'];
+const sections = sectionIds.map((id) => document.querySelector(id));
+const navItems = sectionIds.map((id) =>
+  document.querySelector(`[data-link='${id}']`)
+);
+
+let selectedNavIdx = getIdxOfSectionOnViewPort();
+let selectedNavItem = navItems[selectedNavIdx];
+const observerOpts = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.3,
+};
+const observerCallback = (entries, observer) => {
+  entries.forEach((entry) => {
+    // when an entry disappears from screen
+    if (!entry.isIntersecting && entry.intersectionRatio > 0) {
+      const idx = sectionIds.indexOf(`#${entry.target.id}`);
+      // scroll down
+      if (entry.boundingClientRect.y < 0) {
+        selectedNavIdx = idx + 1;
+      } else {
+        selectedNavIdx = idx - 1;
+      }
+    }
+  });
+};
+const observer = new IntersectionObserver(observerCallback, observerOpts);
+sections.forEach((section) => observer.observe(section));
+
+window.addEventListener('wheel', () => {
+  if (window.scrollY === 0) {
+    selectedNavIdx = 0;
+  } else if (
+    Math.round(window.scrollY + window.innerHeight) >=
+    document.body.clientHeight
+  ) {
+    selectedNavIdx = navItems.length - 1;
+  }
+  selectNavItem(navItems[selectedNavIdx]);
+});
+
+window.addEventListener('load', () => {
+  selectNavItem(navItems[selectedNavIdx]);
+});
+
 // Handle click on the "contact me" button on home
 const homeContactBtn = document.querySelector('.home__contact');
 homeContactBtn.addEventListener('click', () => {
@@ -78,7 +125,22 @@ workBtnContainer.addEventListener('click', (event) => {
   }, 300);
 });
 
+function selectNavItem(selected) {
+  selectedNavItem.classList.remove('active');
+  selectedNavItem = selected;
+  selectedNavItem.classList.add('active');
+}
+
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: 'smooth' });
+  selectNavItem(navItems[sectionIds.indexOf(selector)]);
+}
+
+function getIdxOfSectionOnViewPort() {
+  const section = document
+    .elementFromPoint(window.innerWidth / 2, window.innerHeight * (2 / 3))
+    .closest('.section');
+  const idx = sectionIds.indexOf(`#${section.id}`);
+  return idx;
 }

@@ -152,7 +152,27 @@ p {
 .navbar__menu__item {
   padding: 0.5em 0.8em;
   margin: 0 0.2em;
+  border: 1px solid transparent;
+  color: var(--color-white);
   cursor: pointer;
+}
+
+.navbar__menu__item.active {
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(254, 94, 47, 1) 0%,
+    rgba(248, 252, 69, 1) 50%,
+    rgba(29, 208, 253, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-image: linear-gradient(
+      135deg,
+      rgba(77, 254, 239, 0.8) 0%,
+      rgba(254, 208, 47, 1) 30%,
+      rgba(254, 55, 103, 1) 100%
+    )
+    1;
 }
 
 .navbar__menu__item:hover {
