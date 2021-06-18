@@ -9,9 +9,6 @@ navbarMenu.addEventListener('click', (event) => {
     return;
   }
 
-  // Open navbar__menu for small screen
-  navbarMenu.classList.remove('open');
-
   scrollIntoView(link);
 });
 
