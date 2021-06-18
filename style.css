@@ -453,6 +453,11 @@ p {
   background-color: var(--color-orange);
 }
 
+.project__description span {
+  color: var(--color-light-white);
+  font-size: var(--font-small);
+}
+
 /* Testimonials */
 .testimonials {
   margin: 40px;
