@@ -54,9 +54,7 @@
         <h1 class="home__title">
           何かに熱中することが好きな<br />開発者のノです!
         </h1>
-        <h2 class="home__description">
-          東京でフロントエンドエンジニアを目指しています
-        </h2>
+        <h2 class="home__description">東京でWEBエンジニアを目指しています</h2>
         <button class="home__contact">Contact Me</button>
       </div>
     </section>
@@ -66,7 +64,7 @@
       <div class="section__container">
         <h1>About me</h1>
         <div class="about__descriptions">
-          <ul class="about__descriptions__ul">
+          <ul class="descriptions__ul">
             <li>
               何か熱中することを探して来て，開発の魅力に惹かれ開発者を目指しています
             </li>
@@ -134,104 +132,129 @@
       </div>
     </section>
 
-    <!-- Works -->
+    <!-- Projects -->
     <section id="works" class="section">
-      <div class="section__container">
-        <h1>My work</h1>
-        <h3>Projects</h3>
-        <div class="works__categories">
-          <button class="category__btn selected" data-filter="*">
-            All <span class="category__count">5</span>
-          </button>
-          <button class="category__btn" data-filter="frontend">
-            Frontend
-            <span class="category__count">2</span>
-          </button>
-          <button class="category__btn" data-filter="backend">
-            Backend
-            <span class="category__count">1</span>
-          </button>
-          <button class="category__btn" data-filter="deeplearning">
-            Deep Learning <span class="category__count">1</span>
-          </button>
-        </div>
-        <div class="works__projects">
-          <a
-            href="https://github.com/nabepa/pomodoro"
-            class="project"
-            target="blank"
-            data-type="frontend"
-          >
+      <h1>My work</h1>
+      <div class="works__projects">
+        <div class="project">
+          <div class="img-container">
             <img
               src="image/projects/pomodoro.png"
               alt="Pomodoro Timmer"
               class="project__img"
             />
-            <div class="project__description">
-              <h3>Pomodoro Timmer</h3>
-              <span>
-                集中力の向上を目標とする
-                <br />
-                Pomodoテクニックのためのタイマー
-              </span>
+          </div>
+          <div class="project__description">
+            <h3 class="description__title">Pomodoro Timmer</h3>
+            <p class="description__text">
+              25分間の集中と5分間の休みを繰り返す集中法である
+              <br />
+              Pomodoro Techniqueをサポートするタイマー
+            </p>
+            <ul class="description__tools">
+              <li class="description__tool">html</li>
+              <li class="description__tool">post css</li>
+              <li class="description__tool">javascript</li>
+              <li class="description__tool">react</li>
+            </ul>
+            <div class="description__links">
+              <a
+                class="description__link"
+                href="https://github.com/nabepa/pomodoro"
+                target="_blank"
+              >
+                <i class="fab fa-github" title="github"></i>
+              </a>
+              <a
+                class="description__link"
+                href="https://stoic-shaw-001338.netlify.app/"
+                target="_blank"
+              >
+                <i class="fas fa-external-link-alt" title="application"></i>
+              </a>
             </div>
-          </a>
-          <a
-            href="https://github.com/nabepa/ingredients-saver"
-            class="project"
-            target="blank"
-            data-type="frontend"
-          >
+          </div>
+        </div>
+        <div class="project">
+          <div class="img-container">
             <img
               src="image/projects/ingredients-saver.png"
-              alt="Ingredients Saver"
+              alt="ingredients saver"
               class="project__img"
             />
-            <div class="project__description">
-              <h3>Ingredients Saver</h3>
-              <span>
-                食材の効率的な消費ができるように，
-                <br />
-                持っている材料で作れるレシピーをお勧め
-              </span>
+          </div>
+          <div class="project__description">
+            <h3 class="description__title">Ingredients Saver</h3>
+            <p class="description__text">
+              持っている食材から作れるレシピーを検索できるサービス
+              <br />
+              賞味期限が過ぎる前に，適切なレシピーを探して食材を使い切ろう！
+              <br />
+              選択したレシピーで持っていない材料も教えてくれて，買い物も素早くできる
+            </p>
+            <ul class="description__tools">
+              <li class="description__tool">html</li>
+              <li class="description__tool">post css</li>
+              <li class="description__tool">typescript</li>
+              <li class="description__tool">react</li>
+            </ul>
+            <div class="description__links">
+              <a
+                class="description__link"
+                href="https://github.com/nabepa/ingredients-saver"
+                target="_blank"
+              >
+                <i class="fab fa-github" title="github"></i>
+              </a>
+              <a
+                class="description__link"
+                href="https://jovial-elion-1df897.netlify.app/"
+                target="_blank"
+              >
+                <i class="fas fa-external-link-alt" title="application"></i>
+              </a>
             </div>
-          </a>
-          <a
-            href="https://github.com/dream-ellie/youtube-site"
-            class="project"
-            target="blank"
-            data-type="backend"
-          >
+          </div>
+        </div>
+        <div class="project">
+          <div class="img-container">
             <img
-              src="imgs/projects/robot.jpg"
-              alt="Dweeter"
+              src="image/projects/youtube.png"
+              alt="clone youtube"
               class="project__img"
             />
-            <div class="project__description">
-              <h3>Dweeter</h3>
-              <span>Clone Twitter Simply</span>
+          </div>
+          <div class="project__description">
+            <h3 class="description__title">Clone Youtube</h3>
+            <p class="description__text">
+              Youtubeの一部機能を再現してみたサイト
+              <br />
+              人気動画表示，検索，動画再生
+            </p>
+            <ul class="description__tools">
+              <li class="description__tool">html</li>
+              <li class="description__tool">post css</li>
+              <li class="description__tool">javascript</li>
+              <li class="description__tool">react</li>
+              <li class="description__tool">youtube api</li>
+            </ul>
+            <div class="description__links">
+              <a
+                class="description__link"
+                href="https://github.com/nabepa/youtube-react"
+                target="_blank"
+              >
+                <i class="fab fa-github" title="github"></i>
+              </a>
+              <a
+                class="description__link"
+                href="https://musing-khorana-85bd76.netlify.app/"
+                target="_blank"
+              >
+                <i class="fas fa-external-link-alt" title="application"></i>
+              </a>
             </div>
-          </a>
-          <a
-            href="https://github.com/dream-ellie/youtube-site"
-            class="project"
-            target="blank"
-            data-type="deeplearning"
-          >
-            <img
-              src="imgs/projects/robot.jpg"
-              alt="Deeplearning Robot"
-              class="project__img"
-            />
-            <div class="project__description">
-              <h3>Robot manipulation</h3>
-              <span>
-                Deep Learningを利用した
-                <br />
-                ロボットの行動の切り替えに関する研究
-              </span>
-            </div>
-          </a>
+          </div>
         </div>
       </div>
     </section>
@@ -249,11 +272,8 @@
       <h1 class="contact__title">Let's talk</h1>
       <h2 class="contact__email">nabepadev@gmail.com</h2>
       <div class="contact__links">
-        <a href="http://github.com/ryan-oh" target="_blank">
+        <a href="https://github.com/nabepa" target="_blank">
           <i class="fab fa-github"></i>
-        </a>
-        <a href="#" target="_blank">
-          <i class="fa fa-linkedin-square"></i>
         </a>
       </div>
       <p class="contact__rights">2021 Nabepa - All rights reserved</p>
