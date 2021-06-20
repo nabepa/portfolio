@@ -19,7 +19,7 @@ navbarToggleBtn.addEventListener('click', () => {
 });
 
 // Active Navbar
-const sectionIds = ['#home', '#about', '#works', '#study', '#contact'];
+const sectionIds = ['#home', '#about', '#works', '#contact'];
 const sections = sectionIds.map((id) => document.querySelector(id));
 const navItems = sectionIds.map((id) =>
   document.querySelector(`[data-link='${id}']`)
@@ -92,38 +92,6 @@ document.addEventListener('scroll', () => {
 arrowUp.addEventListener('click', () => {
   scrollIntoView('#home');
 });
-
-// // Projects
-// const workBtnContainer = document.querySelector('.works__categories');
-// const projectsContainer = document.querySelector('.works__projects');
-// const projects = document.querySelectorAll('.project');
-// workBtnContainer.addEventListener('click', (event) => {
-//   const filter =
-//     event.target.dataset.filter || event.target.parentNode.dataset.filter;
-//   if (filter == null) {
-//     return;
-//   }
-
-//   // Remove selection from the previous item and selct the new one
-//   const active = document.querySelector('.category__btn.selected');
-//   if (active != null) {
-//     active.classList.remove('selected');
-//   }
-//   event.target.classList.add('selected');
-
-//   // Filter project
-//   projectsContainer.classList.add('anim-out');
-//   setTimeout(() => {
-//     projects.forEach((project) => {
-//       if (filter === '*' || filter === project.dataset.type) {
-//         project.classList.remove('invisible');
-//       } else {
-//         project.classList.add('invisible');
-//       }
-//     });
-//     projectsContainer.classList.remove('anim-out');
-//   }, 300);
-// });
 
 function selectNavItem(selected) {
   selectedNavItem.classList.remove('active');
