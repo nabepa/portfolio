@@ -327,6 +327,8 @@ p {
 
 .description__text {
   font-size: var(--font-small);
+  list-style: inside;
+  color: var(--color-white);
 }
 
 .description__tools {
