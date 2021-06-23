@@ -284,6 +284,10 @@ p {
 }
 
 /* Works */
+.works__projects {
+  width: 90%;
+  margin: 0 auto;
+}
 .project {
   width: 100%;
   height: 280px;
@@ -458,6 +462,10 @@ p {
 
   .category__btn {
     margin: 4px 0;
+    width: 100%;
+  }
+
+  .works__projects {
     width: 100%;
   }
 
