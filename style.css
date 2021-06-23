@@ -213,7 +213,7 @@ p {
 /* About */
 .about__descriptions {
   color: var(--color-white);
-  margin: 0.2em 0em;
+  margin: 0.2em 0.8em;
   display: flex;
   justify-content: center;
 }
@@ -258,6 +258,7 @@ p {
 .job {
   display: flex;
   align-items: center;
+  margin: 0 0.8em;
 }
 
 .job__logo {
@@ -265,7 +266,7 @@ p {
 }
 
 .job__description {
-  margin: 0 16px;
+  margin: 0 0.8em;
   text-align: left;
 }
 
@@ -478,6 +479,11 @@ p {
 
   .img-container {
     padding: 0.5em 0;
+    width: 80%;
+  }
+
+  .project__description {
+    width: 80%;
   }
 
   .arrow-up {
