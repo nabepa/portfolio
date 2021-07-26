@@ -293,7 +293,6 @@ p {
 
 .project {
   display: flex;
-  align-items: center;
   width: 100%;
   height: 280px;
   margin: 40px 0;
